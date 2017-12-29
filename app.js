@@ -47,7 +47,7 @@ app.get('/new/*', function(req, res, next) {
       console.log('Connection established to', dbUrl);
       
       // insert doc with the url into database
-      var collection = client.db("URL_shortener_db").collection('url_data');
+      var collection = client.db("url_shortener_db").collection('url_data');
       var filter = {
         original_url: url
       };
