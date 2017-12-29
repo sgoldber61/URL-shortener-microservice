@@ -1,0 +1,28 @@
+{
+  "name": "url-shortener-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgoldber61/URL-shortener-microservice.git"
+  },
+  "author": "sgoldber61",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgoldber61/URL-shortener-microservice/issues"
+  },
+  "homepage": "https://github.com/sgoldber61/URL-shortener-microservice#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^3.0.1",
+    "nodemon": "^1.14.3",
+    "path": "^0.12.7",
+    "shortid": "^2.2.8",
+    "valid-url": "^1.0.9"
+  }
+}
