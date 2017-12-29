@@ -10,12 +10,12 @@ var app = express();
 
 // require mongodb
 var mongo = require('mongodb').MongoClient;
-var dbUrl = "mongodb://localhost:27017/URL_shortener_db";
-
+// local version var dbUrl = "mongodb://localhost:27017/URL_shortener_db";
+var dbUrl = process.env.MONGOLAB_URI;
 
 // url prefix for shortened urls
-var urlPrefix = "http://localhost:3000/";
-
+// local version var urlPrefix = "http://localhost:3000/";
+var urlPrefix = "https://url--shortener.glitch.me/";
 
 // app routing
 app.get('/', function(req, res) {
@@ -85,7 +85,7 @@ app.get('/*', function(req, res, next) {
   
     // test to see if url is in database, if no return error, if yes link to page
     // insert doc with the url into database
-    var collection = client.db("URL_shortener_db").collection('url_data');
+    var collection = client.db("url_shortener_db").collection('url_data');
     var filter = {
       short_url: url
     };
