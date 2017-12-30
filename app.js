@@ -21,7 +21,6 @@ var urlPrefix = "https://url--shortener.glitch.me/";
 app.get('/', function(req, res) {
   // render the home page index.html
   res.sendFile(path.join(__dirname, 'index.html'));
-  res.end();
 });
 
 
@@ -69,7 +68,7 @@ app.get('/new/*', function(req, res, next) {
 });
 
 // usage
-app.get('/*', function(req, res, next) {
+app.get('/+', function(req, res, next) {
   console.log("usage");
   
   var url = urlPrefix + req.params[0];
