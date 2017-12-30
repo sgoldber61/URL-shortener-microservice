@@ -68,7 +68,7 @@ app.get('/new/*', function(req, res, next) {
 });
 
 // usage
-app.get('/+', function(req, res, next) {
+app.get('/*', function(req, res, next) {
   console.log("usage");
   
   var url = urlPrefix + req.params[0];
